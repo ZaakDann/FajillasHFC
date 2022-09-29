@@ -276,9 +276,9 @@ async function webapp(){
     let info = await response.json();
     console.log(info);
     if(info[0][0] == 0) {alert(info[0][1]); load.style.display = "none"; return;};
-    let table = "<table><tr><th>CLIENTENRO</th><th>NOMBRE</th><th>ESTADO_CLIENTE</th><th>TIPO SERVICIO</th><th>FAJILLA NRO</th></tr>";
+    let table = "<table><tr><th>FECHA_INSTALACION</th><th>CLIENTENRO</th><th>NOMBRE</th><th>ESTADO_CLIENTE</th><th>TIPO SERVICIO</th><th>FAJILLA NRO</th></tr>";
     for(let i = 0; i < info.length; i++){
-        table = table + "<tr><td>" + info[i][0] + "</td><td>" + info[i][1] + "</td><td>" + info[i][2] + "</td><td>" + info[i][3] + "</td><td>" + info[i][4] + "</td></tr>"
+        table = table + "<tr><td>" + info[i][0] + "</td><td>" + info[i][1] + "</td><td>" + info[i][2] + "</td><td>" + info[i][3] + "</td><td>" + info[i][4] + "</td><td>" + info[i][5] + "</td></tr>"
     }
     table = table + "</table>"
     
